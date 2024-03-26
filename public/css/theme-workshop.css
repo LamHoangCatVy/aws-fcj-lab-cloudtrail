@@ -26,6 +26,11 @@
 
 }
 
+@font-face {
+    font-family: amazon;
+    src: url(./fonts/AmazonEmberDisplay_Md.ttf);
+}
+
 body {
     color: var(--MAIN-TEXT-color) !important;
 }
@@ -151,7 +156,7 @@ div.notices p:first-child:before {
 
 body {
     color: var(--MAIN-TEXT-color) !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: amazon;
 	text-align: left;
 }
 
