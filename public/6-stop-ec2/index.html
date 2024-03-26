@@ -7,26 +7,26 @@
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
 
     <title>Using dude-from-nowhere to Stop EC2 Instance :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711458764" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711458764" rel="stylesheet">
-    <link href="/css/hybrid.css?1711458764" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711458764" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711458764" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711458764" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711458764" rel="stylesheet">
-    <link href="/css/theme.css?1711458764" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711458764" rel="stylesheet">
+    <link href="../css/nucleus.css?1711460118" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1711460118" rel="stylesheet">
+    <link href="../css/hybrid.css?1711460118" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1711460118" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1711460118" rel="stylesheet">
+    <link href="../css/auto-complete.css?1711460118" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1711460118" rel="stylesheet">
+    <link href="../css/theme.css?1711460118" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1711460118" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711458764" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1711460118" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711458764"></script>
+    <script src="../js/jquery-3.3.1.min.js?1711460118"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/6-stop-ec2/">
+  <body class="" data-url="../6-stop-ec2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711458764"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711458764"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1711460118"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1711460118"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711458764"></script>
+<script type="text/javascript" src="../js/search.js?1711460118"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
         
         
         ">
-      <a href="/3-config-cloudtrail/">
+      <a href="../3-config-cloudtrail/">
            <b> 1. </b> CloudTrail Configuring
           
             <i class="fas fa-check read-icon"></i>
@@ -109,7 +109,7 @@
         
         
         ">
-      <a href="/4-add-iam/">
+      <a href="../4-add-iam/">
            <b> 2. </b> Add IAM
           
             <i class="fas fa-check read-icon"></i>
@@ -135,7 +135,7 @@
         
         
         ">
-      <a href="/5-add-ec2/">
+      <a href="../5-add-ec2/">
            <b> 3. </b> Add EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
@@ -161,7 +161,7 @@
         active
         
         ">
-      <a href="/6-stop-ec2/">
+      <a href="../6-stop-ec2/">
            <b> 4. </b> Using dude-from-nowhere to Stop EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
@@ -187,7 +187,7 @@
         
         
         ">
-      <a href="/7-athena-query/">
+      <a href="../7-athena-query/">
            <b> 5. </b> Athena Query
           
             <i class="fas fa-check read-icon"></i>
@@ -213,7 +213,7 @@
         
         
         ">
-      <a href="/8-quicjsight-visualize/">
+      <a href="../8-quicjsight-visualize/">
            <b> 6. </b> Quicksight Visualize
           
             <i class="fas fa-check read-icon"></i>
@@ -239,7 +239,7 @@
         
         
         ">
-      <a href="/9-clean-up/">
+      <a href="../9-clean-up/">
            <b> 7. </b> Resources Clean Up
           
             <i class="fas fa-check read-icon"></i>
@@ -380,7 +380,7 @@
             
           
           
-            <a href='/'>Building a Simple AWS CloudTrail Data Analytics Solution</a> > Using dude-from-nowhere to Stop EC2 Instance
+            <a href='../'>Building a Simple AWS CloudTrail Data Analytics Solution</a> > Using dude-from-nowhere to Stop EC2 Instance
           
         
           
@@ -418,14 +418,14 @@
 	<ol>
 <li>
 <p>Remember you have a secondary IAM user (dude-from-nowhere) that has the permissions to fully interact with Amazon EC2 and Amazon S3. Let&rsquo;s log in as the new dude-from-nowhere user by using the sign-in URL.
-<img alt="02" src="/images/6-stop-ec2/02.png"></p>
+<img alt="02" src="../images/6-stop-ec2/02.png"></p>
 </li>
 <li>
 <p>You can verify if you are logged in with the dude-from-nowhere user by looking in the upper-right are of the AWS Management Console.</p>
 </li>
 <li>
 <p>Choose the region that aligns with the one in which you&rsquo;ve created your EC2 instance
-<img alt="03" src="/images/6-stop-ec2/03.png"></p>
+<img alt="03" src="../images/6-stop-ec2/03.png"></p>
 </li>
 <li>
 <p>Navigate to EC2 service, and stop the instance as the following steps.</p>
@@ -439,12 +439,12 @@
 <p>While you are logged in to the console as <code>dude-from-nowhere</code>, shut down an EC2 instance. Before you shut down any EC2 instances, make sure that you don’t need them, or that you created an additional EC2 instance specifically for this exercise.</p>
 </li>
 </ul>
-<p><img alt="04" src="/images/6-stop-ec2/04.png">
-<img alt="05" src="/images/6-stop-ec2/05.png">
-<img alt="06" src="/images/6-stop-ec2/06.png"></p>
+<p><img alt="04" src="../images/6-stop-ec2/04.png">
+<img alt="05" src="../images/6-stop-ec2/05.png">
+<img alt="06" src="../images/6-stop-ec2/06.png"></p>
 <p>Log out as dude-from-nowhere and log back in as the administrator because you will next use Amazon Athena to query CloudTrail data!</p>
-<p><img alt="07" src="/images/6-stop-ec2/07.png">
-<img alt="08" src="/images/6-stop-ec2/08.png"></p>
+<p><img alt="07" src="../images/6-stop-ec2/07.png">
+<img alt="08" src="../images/6-stop-ec2/08.png"></p>
 
 
 
@@ -608,10 +608,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/5-add-ec2/" title="Add EC2 Instance"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../5-add-ec2/" title="Add EC2 Instance"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/7-athena-query/" title="Athena Query" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../7-athena-query/" title="Athena Query" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -621,19 +621,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711458764"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711458764"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711458764"></script>
-    <script src="/js/jquery.sticky.js?1711458764"></script>
-    <script src="/js/featherlight.min.js?1711458764"></script>
-    <script src="/js/highlight.pack.js?1711458764"></script>
+    <script src="../js/clipboard.min.js?1711460118"></script>
+    <script src="../js/perfect-scrollbar.min.js?1711460118"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1711460118"></script>
+    <script src="../js/jquery.sticky.js?1711460118"></script>
+    <script src="../js/featherlight.min.js?1711460118"></script>
+    <script src="../js/highlight.pack.js?1711460118"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711458764"></script>
-    <script src="/js/learn.js?1711458764"></script>
-    <script src="/js/hugo-learn.js?1711458764"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1711460118"></script>
+    <script src="../js/learn.js?1711460118"></script>
+    <script src="../js/hugo-learn.js?1711460118"></script>
 
-    <link href="/mermaid/mermaid.css?1711458764" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711458764"></script>
+    <link href="../mermaid/mermaid.css?1711460118" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1711460118"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
